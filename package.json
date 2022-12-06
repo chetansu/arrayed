@@ -1,0 +1,31 @@
+{
+  "name": "arrayed",
+  "version": "0.0.1",
+  "description": "utility function for arrays",
+  "main": "arrayed.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chetansu/arrayed.git"
+  },
+  "keywords": [
+    "array",
+    "max",
+    "array",
+    "value",
+    "array",
+    "compare",
+    "array",
+    "sort",
+    "maxX",
+    "minX"
+  ],
+  "author": "Chetan Suri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chetansu/arrayed/issues"
+  },
+  "homepage": "https://github.com/chetansu/arrayed#readme"
+}
