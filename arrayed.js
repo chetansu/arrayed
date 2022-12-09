@@ -10,6 +10,7 @@ const arrayed = (() => {
     const getUnique = (numArray) => [...new Set(numArray)];
     const compare = (arr1, arr2) => JSON.stringify(arr1) === JSON.stringify(arr2);
     const sortArray = (numArray, incr = true) => numArray.sort((a, b) => (incr) ? a - b : b - a);
+    const getCount = (numArray, x) => numArray.reduce((cnt, nextVal)=> cnt += (x===nextVal)?1:0, 0);
 
     return {
         "max": max,
@@ -21,7 +22,8 @@ const arrayed = (() => {
         "getUnique": getUnique,
         "compare": compare,
         "sortArray": sortArray,
-        "getUniqueSorted": getUniqueSorted
+        "getUniqueSorted": getUniqueSorted,
+        "getCount":getCount
     };
 })();
 

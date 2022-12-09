@@ -17,11 +17,13 @@ describe('Calling arrayed functions', function () {
         { args: [[20, 22, 15, 9, 8, 15, 22], false], testFunc: arrayed.getUniqueSorted, expected: [22,20,15,9,8]},      // Remove Duplicate in Array and sort it decrementing
         { args: [[20, 22, 15, 9, 8, 15, 22], true], testFunc: arrayed.getUniqueSorted, expected: [8,9,15,20,22]},      // Remove Duplicate in Array and sort
         { args: [[20, 22, 15, 9, 8, 15, 22], false], testFunc: arrayed.sortArray, expected: [22,22,20,15,15,9,8]},      // Remove Duplicate in Array
-        { args: [[20, 22, 15, 9, 8, 15, 22], true], testFunc: arrayed.sortArray, expected: [8,9,15,15,20,22,22]}      // Remove Duplicate in Array
+        { args: [[20, 22, 15, 9, 8, 15, 22], true], testFunc: arrayed.sortArray, expected: [8,9,15,15,20,22,22]},      // Remove Duplicate in Array
+        { args: [[20, 22, 15, 9, 8, 15, 22], 22], testFunc: arrayed.getCount, expected: 2},      // get the frequency of 22 in array
+        { args: [[20, 22, 15, 9, 8, 15, 22], 27], testFunc: arrayed.getCount, expected: 0}      // get the frequency of 27 in array
     ];
 
     tests.forEach(({ args, testFunc, expected }) => {
-        it(`expected array is ` + expected, function () {
+        it(`expected is ` + expected, function () {
             const res = testFunc(args[0], args[1]);
             console.log("calling function " + testFunc.name + " with array [" + args[0]+"]");
             console.log("Response recieved is " + res);

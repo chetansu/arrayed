@@ -208,6 +208,32 @@ $ [22,20,15,9,8]
 $ [8,9,15,20,22]
 ```
 ---
+<br><br>
+
+## arrayed.getCount()
+getCount function takes in a two parameter
+  * the array
+  * the number to be searched
+
+```sh
+const arrayed = require(arrayed);
+
+// getCount called with the searched number being available in array 
+arrayed.getCount([20,22,15,9,8,15,22], 22);
+// getCount called with the searched number not being available in array
+arrayed.getCount([20,22,15,9,8,15,22], 27);
+```
+
+returns
+```sh
+$ 2
+$ 0
+```
+
+
+***
+
+
  
 for instantiation, you wil have to assign arrayed to a variable.
 A simple usage within the code is shown below.
